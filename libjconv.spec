@@ -5,13 +5,6 @@ Version:	2.8
 Release:	1
 License:	GPL
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	http://www.jaist.ac.jp/~amatsus/linux/src/net/%{name}-%{version}.tar.bz2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,13 +20,6 @@ jednak sЁu©yФ do konwersji z innych zbiorСw znakСw.
 Summary:	Header files for Japanese code conversion library
 Summary(pl):	Pliki nagЁСwkowe do biblioteki jconv
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -46,13 +32,6 @@ Pliki nagЁСwkowe dla biblioteki jconv.
 Summary:	Static jconv libraries
 Summary(pl):	Biblioteki statyczne jconv
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
@@ -65,9 +44,6 @@ Wersja statyczna biblioteki jconv.
 Summary:	Japanese code conversion tool
 Summary(pl):	NarzЙdzie do konwersji kodowania tekstСw japoЯskich
 Group:		Applications/Text
-Group(de):	Applikationen/Text
-Group(fr):	Utilitaires/Texte
-Group(pl):	Aplikacje/Tekst
 Requires:	%{name} = %{version}
 
 %description -n jconv
