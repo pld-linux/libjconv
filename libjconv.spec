@@ -81,13 +81,13 @@ Program do konwersji kodowania Japoñskich tekstów.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__install} -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir},%{_bindir}}
-%{__install} -d $RPM_BUILD_ROOT%{_sysconfdir}/%{name}
-%{__install} default.conf $RPM_BUILD_ROOT%{_sysconfdir}/%{name}
-%{__install} %{name}.so $RPM_BUILD_ROOT%{_libdir}
-%{__install} jconv.h $RPM_BUILD_ROOT%{_includedir}
-%{__install} jconv $RPM_BUILD_ROOT%{_bindir}
-%{__install} %{name}.a $RPM_BUILD_ROOT%{_libdir}
+install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir},%{_bindir}}
+install -d $RPM_BUILD_ROOT%{_sysconfdir}/%{name}
+install default.conf $RPM_BUILD_ROOT%{_sysconfdir}/%{name}
+install %{name}.so $RPM_BUILD_ROOT%{_libdir}
+install jconv.h $RPM_BUILD_ROOT%{_includedir}
+install jconv $RPM_BUILD_ROOT%{_bindir}
+install %{name}.a $RPM_BUILD_ROOT%{_libdir}
 
 gzip -9nf README
 
