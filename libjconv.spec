@@ -84,9 +84,9 @@ Program do konwersji kodowania Japoñskich tekstów.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir},%{_bindir}} \
+	$RPM_BUILD_ROOT%{_sysconfdir}/%{name}
 
-install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir},%{_bindir}}
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/%{name}
 install default.conf $RPM_BUILD_ROOT%{_sysconfdir}/%{name}
 install %{name}.so $RPM_BUILD_ROOT%{_libdir}
 install jconv.h $RPM_BUILD_ROOT%{_includedir}
@@ -104,8 +104,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz
-%attr(755,root,root) %{_libdir}/*.so
 %config %verify(not md5 size mtime) %{_sysconfdir}/%{name}/default.conf
+%attr(755,root,root) %{_libdir}/*.so
 
 %files devel
 %defattr(644,root,root,755)
