@@ -12,7 +12,7 @@ Group(pl):	Biblioteki
 Group(pt_BR):	Bibliotecas
 Group(ru):	‚…¬Ã…œ‘≈À…
 Group(uk):	‚¶¬Ã¶œ‘≈À…
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	http://www.jaist.ac.jp/~amatsus/linux/src/net/%{name}-%{version}.tar.bz2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,7 +24,8 @@ Pakiet ten pozwala na konwersjÍ tekstu w kodowaniu JapoÒskim, moøe
 jednak s≥uøyÊ do konwersji z innych zbiorÛw znakÛw.
 
 %package devel
-Summary:	header files for Japanese code conversion library
+Summary:	Header files for Japanese code conversion library
+Summary(pl):	Pliki nag≥Ûwkowe do biblioteki jconv
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(es):	Desarrollo/Bibliotecas
@@ -42,7 +43,8 @@ Header files for jconv library.
 Pliki nag≥Ûwkowe dla biblioteki jconv.
 
 %package static
-Summary:	header files
+Summary:	Static jconv libraries
+Summary(pl):	Biblioteki statyczne jconv
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(es):	Desarrollo/Bibliotecas
@@ -61,10 +63,11 @@ Wersja statyczna biblioteki jconv.
 
 %package -n jconv
 Summary:	Japanese code conversion tool
+Summary(pl):	NarzÍdzie do konwersji kodowania tekstÛw japoÒskich
 Group:		Applications/Text
 Group(de):	Applikationen/Text
 Group(pl):	Aplikacje/Tekst
-Requires:	%{name}
+Requires:	%{name} = %{version}
 
 %description -n jconv
 Japanese code conversion tool.
@@ -91,11 +94,11 @@ install %{name}.a $RPM_BUILD_ROOT%{_libdir}
 
 gzip -9nf README
 
-%post	-p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post	-p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
