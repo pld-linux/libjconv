@@ -66,6 +66,7 @@ Summary:	Japanese code conversion tool
 Summary(pl):	Narzêdzie do konwersji kodowania tekstów japoñskich
 Group:		Applications/Text
 Group(de):	Applikationen/Text
+Group(fr):	Utilitaires/Texte
 Group(pl):	Aplikacje/Tekst
 Requires:	%{name} = %{version}
 
