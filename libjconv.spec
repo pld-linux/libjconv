@@ -2,7 +2,7 @@ Summary:	Japanese (and not only) code conversion library
 Summary(pl):	Biblioteka do konwersji tekstów japoñskich (i nie tylko)
 Name:		libjconv
 Version:	2.8
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries
 Source0:	http://www.jaist.ac.jp/~amatsus/linux/src/net/%{name}-%{version}.tar.bz2
@@ -54,10 +54,12 @@ Japanese code conversion tool.
 Program do konwersji kodowania Japoñskich tekstów.
 
 %prep
-%setup  -q
+%setup -q
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -fPIC -Wall -DHAVE_CODESET"
 
 %install
 rm -rf $RPM_BUILD_ROOT
