@@ -69,8 +69,6 @@ install jconv.h $RPM_BUILD_ROOT%{_includedir}
 install jconv $RPM_BUILD_ROOT%{_bindir}
 install %{name}.a $RPM_BUILD_ROOT%{_libdir}
 
-gzip -9nf README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -79,7 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README
 %config %verify(not md5 size mtime) %{_sysconfdir}/%{name}/default.conf
 %attr(755,root,root) %{_libdir}/*.so
 
