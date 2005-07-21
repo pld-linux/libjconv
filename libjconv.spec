@@ -3,7 +3,7 @@ Summary(pl):	Biblioteka do konwersji tekstów japoñskich (i nie tylko)
 Name:		libjconv
 Version:	2.8
 Release:	3
-License:	GPL
+License:	GPL v2
 Group:		Libraries
 Source0:	http://www.jaist.ac.jp/~amatsus/linux/src/net/%{name}-%{version}.tar.bz2
 # Source0-md5:	dbc0b977ded88ffa524fca4ea237af51
@@ -82,7 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %dir %{_sysconfdir}/%{name}
-%config %verify(not md5 size mtime) %{_sysconfdir}/%{name}/default.conf
+%config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/%{name}/default.conf
 %attr(755,root,root) %{_libdir}/*.so
 
 %files devel
