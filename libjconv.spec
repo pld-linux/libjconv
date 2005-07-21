@@ -14,14 +14,14 @@ This package provides Japanese code translation based on iconv, it may
 be used also to convert from other character sets.
 
 %description -l pl
-Pakiet ten pozwala na konwersjê tekstu w kodowaniu Japoñskim, mo¿e
+Pakiet ten pozwala na konwersjê tekstu w kodowaniu japoñskim, mo¿e
 jednak s³u¿yæ do konwersji z innych zbiorów znaków.
 
 %package devel
 Summary:	Header files for Japanese code conversion library
 Summary(pl):	Pliki nag³ówkowe do biblioteki jconv
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for jconv library.
@@ -33,7 +33,7 @@ Pliki nag³ówkowe dla biblioteki jconv.
 Summary:	Static jconv libraries
 Summary(pl):	Biblioteki statyczne jconv
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static version of jconv libraries.
@@ -45,13 +45,13 @@ Wersja statyczna biblioteki jconv.
 Summary:	Japanese code conversion tool
 Summary(pl):	Narzêdzie do konwersji kodowania tekstów japoñskich
 Group:		Applications/Text
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description -n jconv
 Japanese code conversion tool.
 
 %description -n jconv -l pl
-Program do konwersji kodowania Japoñskich tekstów.
+Program do konwersji kodowania japoñskich tekstów.
 
 %prep
 %setup -q
@@ -82,7 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %dir %{_sysconfdir}/%{name}
-%config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/%{name}/default.conf
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/%{name}/default.conf
 %attr(755,root,root) %{_libdir}/*.so
 
 %files devel
