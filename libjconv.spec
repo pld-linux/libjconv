@@ -1,5 +1,5 @@
 Summary:	Japanese (and not only) code conversion library
-Summary(pl):	Biblioteka do konwersji tekstów japoñskich (i nie tylko)
+Summary(pl.UTF-8):   Biblioteka do konwersji tekstÃ³w japoÅ„skich (i nie tylko)
 Name:		libjconv
 Version:	2.8
 Release:	3
@@ -13,45 +13,45 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package provides Japanese code translation based on iconv, it may
 be used also to convert from other character sets.
 
-%description -l pl
-Pakiet ten pozwala na konwersjê tekstu w kodowaniu japoñskim, mo¿e
-jednak s³u¿yæ do konwersji z innych zbiorów znaków.
+%description -l pl.UTF-8
+Pakiet ten pozwala na konwersjÄ™ tekstu w kodowaniu japoÅ„skim, moÅ¼e
+jednak sÅ‚uÅ¼yÄ‡ do konwersji z innych zbiorÃ³w znakÃ³w.
 
 %package devel
 Summary:	Header files for Japanese code conversion library
-Summary(pl):	Pliki nag³ówkowe do biblioteki jconv
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe do biblioteki jconv
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for jconv library.
 
-%description devel -l pl
-Pliki nag³ówkowe dla biblioteki jconv.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe dla biblioteki jconv.
 
 %package static
 Summary:	Static jconv libraries
-Summary(pl):	Biblioteki statyczne jconv
+Summary(pl.UTF-8):   Biblioteki statyczne jconv
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static version of jconv libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Wersja statyczna biblioteki jconv.
 
 %package -n jconv
 Summary:	Japanese code conversion tool
-Summary(pl):	Narzêdzie do konwersji kodowania tekstów japoñskich
+Summary(pl.UTF-8):   NarzÄ™dzie do konwersji kodowania tekstÃ³w japoÅ„skich
 Group:		Applications/Text
 Requires:	%{name} = %{version}-%{release}
 
 %description -n jconv
 Japanese code conversion tool.
 
-%description -n jconv -l pl
-Program do konwersji kodowania japoñskich tekstów.
+%description -n jconv -l pl.UTF-8
+Program do konwersji kodowania japoÅ„skich tekstÃ³w.
 
 %prep
 %setup -q
