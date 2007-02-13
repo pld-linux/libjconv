@@ -1,5 +1,5 @@
 Summary:	Japanese (and not only) code conversion library
-Summary(pl.UTF-8):   Biblioteka do konwersji tekstów japońskich (i nie tylko)
+Summary(pl.UTF-8):	Biblioteka do konwersji tekstów japońskich (i nie tylko)
 Name:		libjconv
 Version:	2.8
 Release:	3
@@ -19,7 +19,7 @@ jednak służyć do konwersji z innych zbiorów znaków.
 
 %package devel
 Summary:	Header files for Japanese code conversion library
-Summary(pl.UTF-8):   Pliki nagłówkowe do biblioteki jconv
+Summary(pl.UTF-8):	Pliki nagłówkowe do biblioteki jconv
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -31,7 +31,7 @@ Pliki nagłówkowe dla biblioteki jconv.
 
 %package static
 Summary:	Static jconv libraries
-Summary(pl.UTF-8):   Biblioteki statyczne jconv
+Summary(pl.UTF-8):	Biblioteki statyczne jconv
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -43,7 +43,7 @@ Wersja statyczna biblioteki jconv.
 
 %package -n jconv
 Summary:	Japanese code conversion tool
-Summary(pl.UTF-8):   Narzędzie do konwersji kodowania tekstów japońskich
+Summary(pl.UTF-8):	Narzędzie do konwersji kodowania tekstów japońskich
 Group:		Applications/Text
 Requires:	%{name} = %{version}-%{release}
 
